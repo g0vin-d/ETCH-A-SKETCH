@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ETCH-A-SKETCH</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div id="container">
+        
+    </div>
+    <script type="text/javascript">
+        const container = document.getElementById('container');
+        const cells = document.getElementsByClassName('gridCell');
+        const rows = document.getElementsByClassName('gridRow');
+
+        function defaultGrid() {
+          makeCells(16);
+          makeRows(16);
+        }
+
+        function makeCells(cellNum) {
+          for (let r = 0; r < cellNum; r++) {
+            let cell = document.createElement("div");
+            container.appendChild(cell).className = "gridCell";
+          }
+        }
+
+        function makeRows(rowNum) {
+            for (let i = 0; i < cells.length; i++) {
+                for (let j = 0; j < rowNum; j++){
+                    let row = document.createElement("div");
+                    cells[i].appendChild(row).className = "gridRow";
+                }
+            }
+        }
+        defaultGrid();
+    </script>
+</body>
+</html>
