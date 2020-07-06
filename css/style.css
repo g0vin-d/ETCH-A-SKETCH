@@ -1,18 +1,24 @@
-#container {
-    display: flex;
-    justify-content: center;
-
-}
-.gridCell {
-    display: flex;
-    flex-direction: column;
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
 }
 
-.gridRow {
-    display: flex;
-    border: 2px solid pink;
-    flex-direction: row;
-    height: 20px;
-    width: 20px;
+#grid {
+    display: grid;
+    margin: 50px auto;
+    width: 600px;
+    height: 600px;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
+.grid-Item {
+    min-width: 1px;
+    min-height: 1px;
+    border: 1px solid #5b5656;
+    text-align: center;
+}
+
+.grid-Item:hover {
+    background: lightpink;
+}
