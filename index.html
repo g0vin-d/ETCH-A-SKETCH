@@ -23,10 +23,11 @@
 
         window.addEventListener("mouseover" , function(event) {
             if (event.target.className == "grid-Item") {
-                event.target.style.background = 'deepskyblue';
+                const rand1 = Math.floor(Math.random() * 16777215).toString(16);
+                event.target.style.background = '#' + rand1;
             }    
         });
-        createGrid(46, 46);
+        createGrid(26, 26);
     </script>
 </body>
 </html>
