@@ -6,8 +6,8 @@
 #grid {
     display: grid;
     margin: 50px auto;
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    height: 700px;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
