@@ -11,6 +11,7 @@
     </div>
     <script type="text/javascript">
         const grid = document.getElementById('grid');
+        const divs = document.querySelectorAll(".grid-Item");
         
         function createGrid(rows, cols) {
             grid.style.setProperty('--grid-rows', rows);
@@ -27,7 +28,13 @@
                 event.target.style.background = '#' + rand1;
             }    
         });
-        createGrid(26, 26);
+
+        function resertGrid() {
+          const griditems = document.querySelectorAll(".grid-Item");
+          griditems.forEach(griditem => griditem.style.background = 'white');
+        }
+        
+        createGrid(36, 36);
     </script>
 </body>
 </html>
