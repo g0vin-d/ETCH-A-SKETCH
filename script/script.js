@@ -2,6 +2,13 @@ const grid = document.getElementById('grid');
 const rstbtn = document.querySelector(".rst-btn");
 const crtbtn = document.querySelector(".crt-btn");
 
+defaultGrid();
+
+function defaultGrid() {
+    let setGrid = 26;
+    drawGrid(setGrid, setGrid);
+}
+
 function drawGrid(rows, cols) {
     grid.style.setProperty('--grid-rows', rows);
     grid.style.setProperty('--grid-cols', cols);
