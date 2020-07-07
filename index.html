@@ -6,19 +6,31 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <header id="header" class="nav">
+        <button class="rst-btn">Reset</button>
+        <button class="crt-btn">Create</button>
+    </header>
     <div id="grid">
         
     </div>
     <script type="text/javascript">
         const grid = document.getElementById('grid');
-                
-        function createGrid(rows, cols) {
+        const rstbtn = document.querySelector(".rst-btn");
+        const crtbtn = document.querySelector(".crt-btn");
+        let setGrid = 16; 
+
+        function drawGrid(rows, cols) {
             grid.style.setProperty('--grid-rows', rows);
             grid.style.setProperty('--grid-cols', cols);
             for (let i = 0; i < (rows * cols); i++) {
                 let cell = document.createElement("div");
                 grid.appendChild(cell).className = "grid-Item";
             }
+        }
+
+        function resetGrid() {
+            const griditems = document.querySelectorAll(".grid-Item");
+            griditems.forEach(griditem => griditem.style.background = 'white');
         }
 
         window.addEventListener("mouseover" , function(event) {
@@ -28,12 +40,14 @@
             }    
         });
 
-        function resertGrid() {
-          const griditems = document.querySelectorAll(".grid-Item");
-          griditems.forEach(griditem => griditem.style.background = 'white');
-        }
-        
-        createGrid(36, 36);
+        rstbtn.addEventListener("click" , resetGrid);
+
+        crtbtn.addEventListener("click", () => {
+            const griditems = document.querySelectorAll(".grid-Item");
+            griditems.forEach(griditem => grid.removeChild(griditem));
+            drawGrid(setGrid, setGrid);
+        });
+
     </script>
 </body>
 </html>
