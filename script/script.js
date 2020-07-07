@@ -20,7 +20,8 @@ function drawGrid(rows, cols) {
 
 function resetGrid() {
     const griditems = document.querySelectorAll(".grid-Item");
-    griditems.forEach(griditem => griditem.style.background = 'white');
+    griditems.forEach(griditem => grid.removeChild(griditem));
+    defaultGrid();
 }
 
 window.addEventListener("mouseover" , function(e) {

@@ -4,7 +4,7 @@
 }
 
 html {
-    background: #E9967A;
+    background: #DDA0DD;
     color : #fff;
 }
 
@@ -42,10 +42,11 @@ header {
 
 button, input {
     background-color: rgba(255, 255, 255, 0.15);
-    color: inherit;
+    color: white;
     font-size: 25px;
     margin-left : 20px;
     border: 1px solid white;
     border-radius: 5px;
     padding: 5px 30px 5px 30px;
     border-width: .39vh;
+}
