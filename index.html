@@ -3,16 +3,30 @@
 <head>
     <meta charset="utf-8">
     <title>ETCH-A-SKETCH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <header id="header" class="nav">
-        <button class="rst-btn">Reset</button>
-        <input type="text" name="gridsize" id="gridsize" placeholder="Enter Grid Size">
-        <button class="crt-btn">Create</button>
-    </header>
-    <div id="grid">
-        
+    <div class="container">
+        <header class="navbar">
+            <h6 class="heading-6">Etch-A-Sketch</h6>
+        </header>
+
+        <section class="grid__section">
+            <div id="grid"></div>
+
+            <div class="grid__menu">
+                <h6 class="heading-5">Menu</h6>
+                <input type="text" class="grid__input" name="gridsize" id="gridsize" placeholder="Enter Grid Size ex. 12">
+                <div class="grid__btns">
+                    <button class="btn crt-btn">Create</button>
+                    <button class="btn rst-btn">Reset</button>
+                </div>
+            </div>
+        </section>
+
     </div>
     <script type="text/javascript" src="script/script.js"></script>
 </body>
