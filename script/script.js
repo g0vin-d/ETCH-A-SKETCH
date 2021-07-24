@@ -34,6 +34,7 @@ rstbtn.addEventListener("click" , resetGrid);
 
 crtbtn.addEventListener("click", () => {
     let inp = Number(document.getElementById("gridsize").value);
+    if (inp >= 40) inp = 40;
     const griditems = document.querySelectorAll(".grid-Item");
     griditems.forEach(griditem => grid.removeChild(griditem));
     drawGrid(inp, inp);
